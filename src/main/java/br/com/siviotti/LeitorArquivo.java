@@ -16,7 +16,7 @@ public class LeitorArquivo {
 				conteudo.append(linha).append("\n");
 			}
 		} catch (java.io.IOException e) {
-			e.printStackTrace();
+			throw new RuntimeException("Erro ao ler o arquivo: " + caminhoArquivo, e);
 		}
 		return conteudo.toString();
 	}
